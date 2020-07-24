@@ -1,18 +1,20 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  main
+    utnHeader
+    .section
+      .columns
+        .column.is-2
+          left-bar
+
+        .column
+          router-view
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import utnHeader from '@/components/layout/Header'
+import LeftBar from '@/components/layout/LeftBar'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  components: { utnHeader, LeftBar }
 }
 </script>
